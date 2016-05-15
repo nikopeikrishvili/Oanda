@@ -1,12 +1,12 @@
 <?php
-namespace Oanda\response;
+namespace Oanda\response\getAccounts;
 
 /**
  * Description of OandaAccount
  *
  * @author Niko Peikrishvili
  */
-class Account implements ResponseInterface
+class Account implements \Oanda\response\ResponseInterface
 {
     private $accountId;
     private $accountName;

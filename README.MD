@@ -12,16 +12,16 @@ cd Oanda
 ### GetAccounts Method http://developer.oanda.com/rest-live/accounts/#getAccountsForUser
 ```PHP
 require_once __DIR__.'/vendor/autolod.php';
-
-$account = new Account();
-
+```
+``` PHP
+$acc = new Account();
+$accounts = $acc->getAccounts();
 
 ```
 ###Returns : 
 ```PHP
-Oanda\response\Accounts Object
 
-.Oanda\response\Accounts Object
+Oanda\response\Accounts Object
 (
     [accounts:Oanda\response\Accounts:private] => Array
         (
@@ -35,6 +35,31 @@ Oanda\response\Accounts Object
 
         )
 
+)
+
+```
+
+### GetAccount
+
+```PHP
+$account = $acc->getAccount('9288783');
+```
+
+### Returns : 
+```PHP
+Oanda\response\getAccount\AccountFull Object
+(
+    [accountId:Oanda\response\getAccount\AccountFull:private] => 9288783
+    [accountName:Oanda\response\getAccount\AccountFull:private] => nikopeikrishvili
+    [balance:Oanda\response\getAccount\AccountFull:private] => 10000
+    [unrealizedPl:Oanda\response\getAccount\AccountFull:private] => 0
+    [realizedPl:Oanda\response\getAccount\AccountFull:private] => 0
+    [marginUsed:Oanda\response\getAccount\AccountFull:private] => 0
+    [marginAvail:Oanda\response\getAccount\AccountFull:private] => 10000
+    [openTrades:Oanda\response\getAccount\AccountFull:private] => 0
+    [openOrders:Oanda\response\getAccount\AccountFull:private] => 0
+    [marginRate:Oanda\response\getAccount\AccountFull:private] => 0.02
+    [accountCurrency:Oanda\response\getAccount\AccountFull:private] => USD
 )
 
 ```

@@ -18,6 +18,15 @@ class Account extends \Oanda\Oanda
         $headers = array('Authorization' => 'Bearer '.$this->getToken());
         $response = \Requests::get($this->getUrl().'/accounts/', $headers);
         $this->checkAnswer($response);
-        return (new \Oanda\response\Accounts())->addAccounts(json_decode($response->body)->accounts);
+        return (new \Oanda\response\getAccounts\Accounts())->addAccounts(json_decode($response->body)->accounts);
+    }
+    public function getAccount($id)
+    {
+        
+        $headers = array('Authorization' => 'Bearer '.$this->getToken());
+        $response = \Requests::get($this->getUrl().'/accounts/'.$id, $headers);
+        $this->checkAnswer($response);
+        return new \Oanda\response\getAccount\AccountFull(json_decode($response->body));
+    
     }
 }

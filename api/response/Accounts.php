@@ -1,16 +1,16 @@
 <?php
 
-namespace Oanda\response;
+namespace Oanda\response\getAccounts;
 
 /**
  * Description of Accounts
  *
  * @author Niko Peikrishvili
  */
-class Accounts implements ResponseInterface
+class Accounts implements \Oanda\response\ResponseInterface
 {
     private $accounts = array();
-    public function addAccount(\Oanda\response\Account $account)
+    public function addAccount(\Oanda\response\getAccounts\Account $account)
     {
       $this->accounts[$account->getAccountId()] = $account;   
     }
