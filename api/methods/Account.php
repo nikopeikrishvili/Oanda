@@ -13,6 +13,11 @@ class Account extends \Oanda\Oanda
         
         parent::__construct(new \Oanda\config\OandaConfig());
     }
+    /**
+     *  Get a list of accounts owned by the user
+     * 
+     * @return \Oanda\response\getAccounts\Accounts
+     */
     public function getAccounts()
     {
         $headers = array('Authorization' => 'Bearer '.$this->getToken());
@@ -20,6 +25,12 @@ class Account extends \Oanda\Oanda
         $this->checkAnswer($response);
         return (new \Oanda\response\getAccounts\Accounts())->addAccounts(json_decode($response->body)->accounts);
     }
+    /**
+     * Get account information
+     * 
+     * @param Int $id - Account ID
+     * @return \Oanda\response\getAccount\AccountFull
+     */
     public function getAccount($id)
     {
         

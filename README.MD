@@ -1,4 +1,25 @@
 #oanda.com REST API Wrapper on PHP
+## ToDo
+[X] getAccounts Method
+[X] getAccount Method
+[] getInstrumentsList Method
+[] getCurrentProces
+[] getInstrumentHistory
+[] getOrders
+[] getOrder
+[] createOrder
+[] modifyOrder
+[] closeOrder
+[] getOpenTrades
+[] getTrade
+[] modifyTrade
+[] closeTrade
+[] getOpenPositions
+[] getPositionForInstrument
+[] closePosition
+[] getTransactionHistory
+[] getTransaction
+[] getFullAccountHistory
 
 ## Installing
 ### Github
