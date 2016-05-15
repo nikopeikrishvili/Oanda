@@ -1,4 +1,5 @@
 #oanda.com REST API Wrapper on PHP
+[![Build Status](https://travis-ci.org/nikopeikrishvili/Oanda.svg?branch=master)](https://travis-ci.org/nikopeikrishvili/Oanda)
 ## ToDo
 - [X] getAccounts Method
 - [X] getAccount Method
