@@ -21,7 +21,7 @@ class AccountsTest extends PHPUnit_Framework_TestCase
     /**
      * @test
      */
-    public function testGetAccounts()
+    public function testGetAccountsMethodIfIsIntanceOfAccounts()
     {
         $result = $this->account->getAccounts();
         $this->assertInstanceOf('\Oanda\response\getAccounts\Accounts', $result);
@@ -30,7 +30,7 @@ class AccountsTest extends PHPUnit_Framework_TestCase
     /**
      * @test
      */
-    public function testGetAccount()
+    public function testGetAccountMetshodIfIsIntanceOfAccountFull()
     {
         $result = $this->account->getAccount('9288783');
         $this->assertInstanceOf('\Oanda\response\getAccount\AccountFull', $result);

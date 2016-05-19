@@ -14,7 +14,7 @@ class OandaTest extends PHPUnit_Framework_TestCase
      * @expectedExceptionMessage Invalid Mode
      * @expectedExceptionCode 500
      */
-    public function TestInvalidMode()
+    public function TestExceptionIfInvalidModeIsSet()
     {
         $oandaConfig = new \Oanda\config\OandaConfig();
         $oandaConfig->currentMode = 'demp1';
@@ -27,7 +27,7 @@ class OandaTest extends PHPUnit_Framework_TestCase
      * @expectedExceptionCode 500
      * @expectedExceptionMessage Url Is Empty
      */
-    public function TestEmptyUrl()
+    public function TestExceptionIfUrlIsEmpty()
     {
         $oandaConfig = new \Oanda\config\OandaConfig();
         $oandaConfig->config[$oandaConfig->currentMode]['url']='';
@@ -41,7 +41,7 @@ class OandaTest extends PHPUnit_Framework_TestCase
      * @expectedExceptionCode 500
      * @expectedExceptionMessage Token Is Empty
      */
-    public function TestEmptyToken()
+    public function TestExceptionIfTokenIsEmpty()
     {
         $oandaConfig = new \Oanda\config\OandaConfig();
         $oandaConfig->config[$oandaConfig->currentMode]['token']='';
