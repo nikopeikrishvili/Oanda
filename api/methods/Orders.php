@@ -12,10 +12,10 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 class Orders extends \Oanda\Oanda
 {
 
-    public function __construct()
+    public function __construct($url,$token)
     {
 
-        parent::__construct(new \Oanda\config\OandaConfig());
+        parent::__construct($url,$token);
     }
 
     /**
